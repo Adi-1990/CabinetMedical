@@ -14,13 +14,13 @@
         <td th:text="CNP"></td>
     </tr>
     <th:block th:each="user : ${userList}">
-                <tr>
-                    <td th:text="${user.getUserId()}"></td>
-                    <td th:text="${user.getUserName()}"></td>
-                    <td th:text="${user.getCNP()}"></td>
-                    <td><button type="submit" name="removeButton" value="remove">Remove</button></td>
-                    <td><button type="submit" name="editButton" value="edit">Edit</button></td>
-                </tr>
+        <tr>
+            <td th:text="${user.getUserId()}"></td>
+            <td th:text="${user.getUserName()}"></td>
+            <td th:text="${user.getCNP()}"></td>
+            <td><button type="submit" name="removeButton" value="remove">Remove</button></td>
+            <td><button type="submit" name="editButton" value="edit">Edit</button></td>
+        </tr>
     </th:block>
 </table>
 
