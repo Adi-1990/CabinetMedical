@@ -7,17 +7,18 @@
 </head>
 <body>
 
-<table>
+<table border="2">
     <tr>
         <td th:text="ID"></td>
         <td th:text="userName"></td>
         <td th:text="CNP"></td>
     </tr>
-<!--    <th:block th:each="user : ${allUsers}">-->
-<!--        <tr>-->
-
-
-<!--        </tr>-->
+    <th:block th:each="user : ${userList}">
+                <tr>
+                    <td th:text="${user.getUserId()}"></td>
+                    <td th:text="${user.getUserName()}"></td>
+                    <td th:text="${user.getCNP()}"></td>
+                </tr>
     </th:block>
 </table>
 
