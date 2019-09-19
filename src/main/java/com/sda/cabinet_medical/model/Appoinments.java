@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Data
@@ -20,8 +21,7 @@ public class Appoinments {
     @JoinColumn(name = "userId", nullable = false)
     private User pacient;
 
-    @ManyToOne
-    @JoinColumn(name = "examinationId", nullable = false)
-    private Appoinments appoinments;
+    @OneToMany(mappedBy = "appoinment")
+    private Set<Examinations> examination;
 
 }

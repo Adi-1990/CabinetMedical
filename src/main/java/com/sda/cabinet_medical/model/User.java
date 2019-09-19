@@ -29,10 +29,10 @@ public class User {
     Set<Fieldwork> fieldworks = new HashSet<>();
 
 
-    @OneToMany(mappedBy = "appoinment")
+    @OneToMany(mappedBy = "pacient")
     private Set<Appoinments> appoinment;
 
-    @OneToMany(mappedBy = "examination")
+    @OneToMany(mappedBy = "doctor")
     private Set<Examinations> examination;
 
 }
