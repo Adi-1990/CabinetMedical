@@ -23,6 +23,7 @@ public class UserController {
     public String getAll(Model model) {
         List<User> userList = userService.getAllUsers();
         model.addAttribute("userList", userList);
+        model.addAttribute("user", new User());
         return "/list";
     }
 
