@@ -18,9 +18,23 @@
                     <td th:text="${user.getUserId()}"></td>
                     <td th:text="${user.getUserName()}"></td>
                     <td th:text="${user.getCNP()}"></td>
+                    <td><button type="submit" name="removeButton" value="remove">Remove</button></td>
+                    <td><button type="submit" name="editButton" value="edit">Edit</button></td>
                 </tr>
     </th:block>
 </table>
+
+</br>
+<form action="#" th:action="@{/user/save}" th:object="${User}" method="post">
+    <tr>
+        <td><label> User name: <input type="text" th:field="*{userName}"/></label></td></br>
+        <td><label> CNP: <input type="text" th:field="*{CNP}"/></label></td></br>
+        <td><label> First Name: <input type="text" th:field="*{firstName}"/></label></td></br>
+        <td><label> Last Name: <input type="text" th:field="*{lastName}"/></label></td></br>
+        <td><input type="submit" value="Add new client"/> </td>
+    </tr>
+</form>
+
 
 </body>
 </html>
