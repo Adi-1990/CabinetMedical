@@ -25,7 +25,7 @@
 </table>
 
 </br>
-<form action="#" th:action="@{/user/save}" th:object="${User}" method="post">
+<form action="#" th:action="@{/user/save}" th:object="${user}" method="post">
     <tr>
         <td><label> User name: <input type="text" th:field="*{userName}"/></label></td></br>
         <td><label> CNP: <input type="text" th:field="*{CNP}"/></label></td></br>
