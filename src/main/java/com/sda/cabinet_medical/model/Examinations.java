@@ -22,8 +22,8 @@ public class Examinations {
     @JoinColumn(name = "userId", nullable = false)
     private User doctor;
 
-    @OneToMany(mappedBy = "appoinments")
-    private Set<Appoinments> appoinments;
-
-
+    @ManyToOne
+    @JoinColumn(name = "appointmentId", nullable = false)
+    private Appoinments appoinment;
+    
 }
