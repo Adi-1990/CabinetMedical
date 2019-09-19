@@ -29,6 +29,6 @@ public class UserController {
     @PostMapping({"/save"})
     public String save (@ModelAttribute User user, Model model){
         user = this.userService.addNewUser(user);
-        return "redirect:/client/list";
+        return "redirect:/user/list";
     }
 }
